@@ -1,10 +1,24 @@
-# Name
+# Spring OAuth 2.0 Client and UAA
 
 Overview
 
 ## Description
 
 ## Demo
+### Required Configuration
+#### Spring Profile for DataSource
+```
+$set -x SPRING_PROFILES "default,hsqldb"
+```
+
+#### JWS Key Pair
+```
+$openssl genrsa -out signingkey.pem 2048
+$openssl rsa -in signingkey.pem -pubout -out verificationkey.pem
+
+$set -x JWT_TOKEN_SIGNING_KEY (cat signingkey.pem)
+$set -x JWT_TOKEN_VERIFICATION_KEY (cat verificationkey.pem)
+```
 
 ## Features
 
