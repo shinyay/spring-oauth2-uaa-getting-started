@@ -8,22 +8,31 @@ Overview
 ### Required Configuration
 #### Spring Profile for DataSource
 ```
-$set -x SPRING_PROFILES "default,hsqldb"
+$ set -x SPRING_PROFILES "default,hsqldb"
 ```
 
 #### JWS Key Pair
 ```
-$openssl genrsa -out signingkey.pem 2048
-$openssl rsa -in signingkey.pem -pubout -out verificationkey.pem
+$ openssl genrsa -out signingkey.pem 2048
+$ openssl rsa -in signingkey.pem -pubout -out verificationkey.pem
 
-$set -x JWT_TOKEN_SIGNING_KEY (cat signingkey.pem)
-$set -x JWT_TOKEN_VERIFICATION_KEY (cat verificationkey.pem)
+$ set -x JWT_TOKEN_SIGNING_KEY (cat signingkey.pem)
+$ set -x JWT_TOKEN_VERIFICATION_KEY (cat verificationkey.pem)
 ```
 
 ### Stating up UAA
 ```
-$cd <UAA_DIR>
-$./gradlew run
+$ cd <UAA_DIR>
+$ ./gradlew run
+```
+
+### Populating Clients and Users Using UAAC
+```
+$ uaac target http://<UAA_ADDRESS>:8080/uaa
+```
+
+```
+$ docker run --rm -v (pwd):/root -it shinyay/cf-uaac target http://<UAA_ADDRESS>:8080/uaa
 ```
 
 ## Features
