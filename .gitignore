@@ -5,6 +5,10 @@ build/
 !**/src/main/**
 !**/src/test/**
 
+### UAA ###
+signingkey.pem
+verificationkey.pem
+
 ### STS ###
 .apt_generated
 .classpath
