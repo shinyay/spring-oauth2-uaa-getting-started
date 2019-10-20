@@ -20,6 +20,12 @@ $set -x JWT_TOKEN_SIGNING_KEY (cat signingkey.pem)
 $set -x JWT_TOKEN_VERIFICATION_KEY (cat verificationkey.pem)
 ```
 
+### Stating up UAA
+```
+$cd <UAA_DIR>
+$./gradlew run
+```
+
 ## Features
 
 - feature:1
