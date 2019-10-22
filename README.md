@@ -27,6 +27,7 @@ $ ./gradlew run
 ```
 
 ### Populating Clients and Users Using UAAC
+#### Target UAA server
 ```
 $ uaac target http://<UAA_ADDRESS>:8080/uaa
 ```
@@ -36,6 +37,8 @@ $ docker run --rm -v (pwd):/root -it shinyay/cf-uaac target http://<UAA_ADDRESS>
 ```
 
 - <UAA_ADDRESS>: `ifconfig en0 | awk '/inet / {print $2}'`
+
+It generates **.uaac.yml**
 
 
 ## Features
