@@ -40,6 +40,17 @@ $ docker run --rm -v (pwd):/root -it shinyay/cf-uaac target http://<UAA_ADDRESS>
 
 It generates **.uaac.yml**
 
+#### Retrieve UAA Token
+```
+$ uaac token client get admin -s adminsecret
+```
+
+This account is defined in [oauth-clients.xml](https://github.com/cloudfoundry/uaa/blob/master/uaa/src/main/webapp/WEB-INF/spring/oauth-clients.xml)
+
+```
+$ docker run --rm -v (pwd):/root -it shinyay/cf-uaac token client get admin -s adminsecret
+```
+
 
 ## Features
 
