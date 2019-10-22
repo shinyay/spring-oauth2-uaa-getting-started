@@ -70,6 +70,22 @@ $ docker run --rm -v (pwd):/root -it shinyay/cf-uaac client add webappclient -s 
                                               --redirect_uri http://localhost:8081/login/oauth2/code/uaa
 ```
 
+#### Register user
+```
+$ docker run --rm -v (pwd):/root -it shinyay/cf-uaac user add appuser -p appusersecret --emails appuser@pivotal.io
+```
+
+#### Register groups
+```
+$ docker run --rm -v (pwd):/root -it shinyay/cf-uaac group add resource.read
+$ docker run --rm -v (pwd):/root -it shinyay/cf-uaac group add resource.write
+```
+
+#### Assign groups to user
+```
+$ docker run --rm -v (pwd):/root -it shinyay/cf-uaac member add resource.read appuser
+$ docker run --rm -v (pwd):/root -it shinyay/cf-uaac member add resource.write appuser
+```
 
 ## Features
 
