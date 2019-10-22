@@ -8,6 +8,7 @@ build/
 ### UAA ###
 signingkey.pem
 verificationkey.pem
+.uaac.yml
 
 ### STS ###
 .apt_generated
