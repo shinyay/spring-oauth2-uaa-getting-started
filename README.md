@@ -87,6 +87,22 @@ $ docker run --rm -v (pwd):/root -it shinyay/cf-uaac member add resource.read ap
 $ docker run --rm -v (pwd):/root -it shinyay/cf-uaac member add resource.write appuser
 ```
 
+### Login
+
+#### Access
+- Access to `/login` PATH
+
+```
+$ open http://localhost:8081/login
+```
+
+- LOGIN-USR: `appuser`
+- LOGIN-PWD: `appusersecret`
+
+#### Authorization Configuration
+
+- **resource:write**: OFF
+
 ## Features
 
 - feature:1
