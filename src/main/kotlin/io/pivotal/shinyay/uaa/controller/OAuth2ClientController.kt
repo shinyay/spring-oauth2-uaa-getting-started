@@ -37,6 +37,14 @@ class OAuth2ClientController(@Value("\${resource.server.url}") val remoteResourc
                 "<a href='/write'>Call Resource Server Write API</a>"
     }
 
+    @RequestMapping("/read")
+    fun read(authenticationToken: OAuth2AuthenticationToken) =
+            retrieveAccessToken(authenticationToken, "$remoteResourceServer/read")
+
+    @RequestMapping("/write")
+    fun write(authenticationToken: OAuth2AuthenticationToken) =
+            retrieveAccessToken(authenticationToken, "$remoteResourceServer/write")
+
     fun retrieveAccessToken(authenticationToken: OAuth2AuthenticationToken, url: String): String {
         val oAuth2AuthorizedClient: OAuth2AuthorizedClient =
                 this.authorizedClientService
