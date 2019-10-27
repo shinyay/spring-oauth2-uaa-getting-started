@@ -13,3 +13,6 @@ spring:
         provider:
           uaa:
             issuer-uri: http://localhost:8080/uaa/oauth/token
+resource:
+  server:
+    url: http://localhost:8082
