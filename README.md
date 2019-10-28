@@ -1,6 +1,6 @@
 # Spring OAuth 2.0 Client and UAA
 
-Overview
+- [Spring OAuth 2.0 Resource Server and UAA](https://github.com/shinyay/spring-oauth2-resource-server-uaa-gs)
 
 ## Description
 
