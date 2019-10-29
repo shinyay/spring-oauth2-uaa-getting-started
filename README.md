@@ -116,6 +116,18 @@ $ open http://localhost:8081/login
 
 - **resource:write**: OFF
 
+### OAuth 2.0 Client
+#### Setup
+The following definitin is registered at UAA as Admin Client
+
+- spring.security.oauth2.client.registration.uaa
+  - client-id
+  - client-secret
+  - scope
+
+- spring.security.oauth2.client.provider.uaa.issuer-uri
+  - ` http://localhost:8080/uaa/oauth/token`
+
 ## Features
 
 - feature:1
